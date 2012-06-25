@@ -1,0 +1,2 @@
+ghc -c HJson.hs
+ghc -o a.exe Main.hs
