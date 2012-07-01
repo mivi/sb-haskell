@@ -1,0 +1,5 @@
+:info Tree
+Node (Node(Node (RLeaf "vi") (LLeaf 20)) (LLeaf 100)) (Node (LLeaf 10) (RLeaf "vi"))
+:type it
+getlength (10::Int)
+getlength "Vishal"

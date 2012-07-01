@@ -18,3 +18,4 @@ f = map (map length)
 main = do
   let a=[[["Jim", "harry"]], [["Jennifer", "Jennifer bro", "Jennifer sis"]]]
   print $ map f a
+  
