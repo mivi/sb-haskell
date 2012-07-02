@@ -47,10 +47,10 @@ instance Monad Parser where
 lengthbasedStringParser = Parser (simpleLengthParse) >>=
   (\_ ->Parser (simpleStringParse))
 
-execMyParser ps =(fetchparser jointparser) ps
-  where jointparser = Parser(simpleLengthParse) >>=
-  (\_ -> Parser(simpleStringParse)) >>=
-  (\x ->Parser(simpleLengthParse)) >>=
-  (\_ -> Parser(simpleStringParse)) >>=
-  (\y -> return [x,y])
-
+-- execMyParser (State (L8.pack "2vi3sha") 0 0)
+execMyParser ps =(fetchparser j) ps
+  where j = (Parser simpleLengthParse ) >>=
+            (\_ -> Parser(simpleStringParse)) >>=
+            (\x -> Parser(simpleLengthParse) >>=
+            (\_ -> Parser(simpleStringParse)) >>=
+            (\y -> return [x,y]))
